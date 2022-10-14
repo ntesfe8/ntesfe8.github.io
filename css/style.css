@@ -1,0 +1,708 @@
+
+@media screen and (max-width:800px){
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dancing+Script&display=swap');
+
+
+  
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }    
+    .container{
+        display: flex;
+         flex-direction: column;
+        
+    }
+    /* menu bar starts here */
+    .menu-bar{
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #212121;
+        z-index: 10;
+    }
+    
+
+     .menu{
+        margin-left: .5rem;
+        margin-top: .5rem;
+    } 
+ 
+    .line{
+        width: 2.5rem;
+        height: .2rem;
+        margin-bottom: .6rem;
+        background-color: goldenrod;
+        margin-left: 1rem;
+     
+    }
+    
+    .line-1,.line-3{
+        width: 1.8rem;
+        transition: all .4s;
+    }
+    
+    .menu:hover .line{
+        width: 2.5rem;
+        cursor: pointer;
+    }
+    
+    .search-bar{
+        margin-right: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .input-search{
+       opacity: 0;
+       outline: none;
+       letter-spacing: .1rem;
+       width: 60%;
+       font-size: 1.2rem;
+       position: absolute;
+       top: 3.5rem;
+       border-radius: 2rem;
+       padding: .2rem;
+       
+    
+    }
+    .search-icon{
+        position: relative;
+         bottom: 0.1rem;
+         font-size: 2rem;
+         color: goldenrod;
+         align-self: center;
+         right: 0.5rem;
+         margin-top: 1rem;
+    
+    }
+    
+    .search-checkbox:checked ~ .search-bar .input-search{
+        opacity: 1;
+    }
+    
+    .search-icon:hover{
+        cursor: pointer;
+    }
+    
+    .checkbox:checked ~ .navigation-bar{
+       left:0;
+    }
+    
+    .checkbox:checked ~ .menu-bar .menu .line-1{
+        transform: rotate(-405deg) translate(-8px,8px);
+    }
+    .checkbox:checked ~ .menu-bar .menu .line-2{
+        opacity: 0;
+    }
+    
+    .checkbox:checked ~ .menu-bar .menu .line-3{
+        transform: rotate( 405deg) translate(-8px,-8px);
+    }
+    
+    
+    .navigation-bar{
+        position: fixed;
+        width: 8rem;
+        height:100%;
+        background-color: #212121;
+        font-size: 1.5rem;
+        left: -10rem;
+        transition: all .4s cubic-bezier(.17,.67,.83,.67);
+        opacity: 0.8;
+    }
+    
+    .navigation-pane{
+        margin-top: 13rem;
+    }
+    
+    .navigation-list{
+        display: flex;
+        height: 20rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .navigation-link{
+        text-decoration: none;
+        color: #fff;
+        transition: color .5s;
+        font-size: 1rem;
+       
+    }
+    
+    .navigation-link:hover{
+        color: goldenrod;
+        
+    }
+    
+    .navigation-item{
+        position: relative;
+    }
+    
+    .navigation-link::before{
+        content: "";
+        width:0rem;
+        height: .1rem;
+        background-color: goldenrod;
+        position: absolute;
+        top: .5rem;
+        left: -2rem;
+        transition: width .5s cubic-bezier(1,0,0,1);
+    }
+    .navigation-link::after{
+        content: "";
+        width: 0rem;
+        height: .1rem;
+        background-color: goldenrod;
+        position: absolute;
+        top: .5rem;
+        right: -2rem;
+        transition: width .5s cubic-bezier(1,0,0,1);
+    }
+    
+    .navigation-link:hover::before,
+    .navigation-link:hover::after{
+        width: 1.6rem;
+    }
+    
+    /* navigation-bar ends here */
+    
+    /* display-section starts here*/
+    .display-section{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100vh;
+          background: linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,.5)) ,url("../images/bg_images.jpg") no-repeat center /cover;
+          object-fit: cover;
+
+    }
+
+    .header h1{
+        color:#ffc107;
+        text-align: center;
+    }
+
+    .header h2{
+        color: #ffc107;
+        font-size: 2rem;
+        margin-left: 4rem;
+        text-align: center;
+    }
+
+    .header p{
+        margin-top: 2rem; 
+        width:65vw;
+        margin: 0 auto;
+        margin-left:6rem;
+        font-size: 1.2rem;
+        padding: 1rem;
+        
+    }
+    
+    .learn-more{
+       margin-top: 6rem;
+       font-size: 1.3rem;
+       text-align: center;
+       letter-spacing: .2rem;
+       transition:transform .5s;
+       justify-self: flex-end;
+    
+      
+    }
+    .learn-more a{
+        text-decoration: none;
+        color: goldenrod;
+        transition: color .5s;
+        display: block;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 4rem;
+     
+    }
+    
+    .learn-more a:hover{
+        color: #f57f17;
+       
+    }
+    .learn-more:hover{
+        transform:scale(1.2,1.2);
+      
+    }
+    
+    .material-symbols-outlined{
+        margin-left: .5rem;
+        /* margin-top: 0.7rem; */
+
+    
+    }
+
+        /* display-section ends here */
+/* about me starts here */
+    .about-me{
+        margin-top: .1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #212121;
+        color: #fff;
+        padding:1.5rem;
+        height: 100vh;
+    }
+.img-card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card p{
+    margin-top: 1rem;
+    color: chartreuse;
+}
+    .about-me img{
+        border-radius: 2rem;
+
+    }
+
+    /* about me ends here */
+
+    /* experience starts here */
+    .experience{
+        margin-top: .1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        color: #fff;
+    }
+    .experience p{
+        margin-top: 1rem;
+    }
+
+    .experience ul{
+        margin-top: 1rem;
+        list-style: circle;
+        color: chartreuse;
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+
+    .contact-me{
+        margin-top: .1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        color: #fff;
+
+    }
+
+    .contact-me .social-icons-list
+    {
+        height: 70%;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: flex-end;
+    }
+  .fa-brands{
+    /* display: block; */
+    margin-top: 10rem;
+     color: cornflowerblue;
+     font-size: 1.2rem;
+     transition: color .3s;
+  }
+
+  .fa-brands:hover{
+    color: goldenrod;
+  }
+    /* experience ends here */
+    .footer{
+        background-color:#212121;
+        text-align: center;
+        padding: 3rem;
+        z-index: 10;
+        color: #616161;
+        font-family: 'Overpass Mono', monospace;
+    }
+
+}
+
+
+
+
+@media screen and (min-width:800px) {
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Overpass+Mono:wght@300&family=Roboto&display=swap');
+
+    
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }    
+    .container{
+        display: flex;
+         flex-direction: column;
+        
+        /* height: 100vh; */
+        
+    }
+    /* menu bar starts here */
+    .menu-bar{
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #212121;
+        z-index: 10;
+    }
+    
+
+    .menu{
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    
+    .line{
+        width: 2.5rem;
+        height: .2rem;
+        margin-bottom: .6rem;
+        background-color: goldenrod;
+        margin-left: 1.5rem;
+     
+    }
+    
+    .line-1,.line-3{
+        width: 1.8rem;
+        transition: all .4s;
+    }
+    
+    .menu:hover .line{
+        width: 2.5rem;
+        cursor: pointer;
+    }
+    
+    .search-bar{
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .input-search{
+       padding: .5rem;
+       padding-right: 3rem;
+       opacity: 0;
+       outline: none;
+       letter-spacing: .1rem;
+       width: 30%;
+       font-weight: bold;
+       font-size: 1.2rem;
+        position: absolute;
+        top: 4.2rem;
+        border-radius: 2rem;
+        right: 3rem;
+    
+    }
+    .search-icon{
+        position: relative;
+         right: 2rem;
+         bottom: 0.1rem;
+         font-size: 3rem;
+         color: goldenrod;
+         align-self: center;
+    
+    }
+    
+    .search-checkbox:checked ~ .search-bar .input-search{
+        opacity: 1;
+    }
+    
+    .search-icon:hover{
+        cursor: pointer;
+    }
+    
+    .checkbox:checked ~ .navigation-bar{
+       left:0;
+    }
+    
+    .checkbox:checked ~ .menu-bar .menu .line-1{
+        transform: rotate(-405deg) translate(-8px,8px);
+    }
+    .checkbox:checked ~ .menu-bar .menu .line-2{
+        opacity: 0;
+    }
+    
+    .checkbox:checked ~ .menu-bar .menu .line-3{
+        transform: rotate( 405deg) translate(-8px,-8px);
+    }
+    
+    
+    .navigation-bar{
+        position: fixed;
+        width: 8rem;
+        height:100%;
+        background-color: #212121;
+        font-size: 1.5rem;
+        left: -10rem;
+        transition: all .4s cubic-bezier(.17,.67,.83,.67);
+        opacity: 0.8;
+    }
+    
+    .navigation-pane{
+        margin-top: 13rem;
+    }
+    
+    .navigation-list{
+        display: flex;
+        height: 20rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .navigation-link{
+        text-decoration: none;
+        color: #fff;
+        transition: color .5s;
+        font-size: 1.2rem;
+       
+    }
+    
+    .navigation-link:hover{
+        color: goldenrod;
+        
+    }
+    
+    .navigation-item{
+        position: relative;
+    }
+    
+    .navigation-link::before{
+        content: "";
+        width:0rem;
+        height: .1rem;
+        background-color: goldenrod;
+        position: absolute;
+        top: .5rem;
+        left: -2rem;
+        transition: width .5s cubic-bezier(1,0,0,1);
+    }
+    .navigation-link::after{
+        content: "";
+        width: 0rem;
+        height: .1rem;
+        background-color: goldenrod;
+        position: absolute;
+        top: .5rem;
+        right: -2rem;
+        transition: width .5s cubic-bezier(1,0,0,1);
+    }
+    
+    .navigation-link:hover::before,
+    .navigation-link:hover::after{
+        width: 1.6rem;
+    }
+    
+    /* navigation-bar ends here */
+    
+    /* display-section starts here*/
+    .display-section{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100vh;
+          background:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,.5)), url("../images/bg_images.jpg") no-repeat center /cover;
+          object-fit: cover;
+
+    }
+
+    .header h1{
+        color:#ffc107;
+        text-align: center;
+    }
+
+    .header h2{
+        color: #ffc107;
+        font-size: 4rem;
+        margin-left: 10rem;
+        text-align: center;
+    }
+
+    .header p{
+        margin-top: 2rem; 
+        width: 25vw;
+        margin: 0 auto;
+        margin-left: 40rem;
+        font-size: 1.2rem;
+        padding: 1rem;
+        
+    }
+    
+    
+    .picture-display img{
+          width: 150px;
+          height: 150px;
+          border-radius: 100%;
+          object-fit: cover;
+          box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    }
+    
+
+
+    
+    .learn-more{
+       margin-top: 3rem;
+       font-size: 2.3rem;
+       text-align: center;
+       letter-spacing: .2rem;
+       transition:transform .5s;
+       margin-left: 1rem;
+    
+      
+    }
+    .learn-more a{
+        text-decoration: none;
+        color: goldenrod;
+        transition: color .5s;
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+     
+    }
+    
+    .learn-more a:hover{
+        color: #f57f17;
+       
+    }
+    .learn-more:hover{
+        transform:scale(1.2,1.2);
+      
+    }
+    
+    .material-symbols-outlined{
+        margin-left: .5rem;
+        margin-top: 0.7rem;
+
+    
+    }
+
+        /* display-section ends here */
+/* about me starts here */
+    .about-me{
+        margin-top: .3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #212121;
+        color: #fff;
+        padding:1.5rem;
+        height: 100vh;
+    }
+.img-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card p{
+    text-align: center;
+    margin-top: 1rem;
+    color: chartreuse;
+    width: 25%;
+}
+    .about-me img{
+        border-radius: 2rem;
+
+    }
+
+    /* about me ends here */
+
+    /* experience starts here */
+    .experience{
+        margin-top: .3rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        color: #fff;
+    }
+    .experience p{
+        margin-top: 1rem;
+    }
+
+    .experience ul{
+        margin-top: 1rem;
+        list-style: circle;
+        color: chartreuse;
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+
+    .contact-me{
+        margin-top: .3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        background-color: #212121;
+        color: #fff;
+
+    }
+
+    .contact-me .social-icons-list
+    {
+        height: 70%;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: flex-end;
+    }
+  .fa-brands{
+    /* display: block; */
+    margin-top: 10rem;
+     color: cornflowerblue;
+     font-size: 1.2rem;
+     transition: color .3s;
+  }
+
+  .fa-brands:hover{
+    color: goldenrod;
+  }
+    /* experience ends here */
+    .footer{
+        background-color:#212121;
+        text-align: center;
+        padding: 3rem;
+        z-index: 10;
+        color: #616161;
+        font-family: 'Overpass Mono', monospace;
+    }
+}
